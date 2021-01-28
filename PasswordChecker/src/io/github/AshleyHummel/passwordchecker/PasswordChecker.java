@@ -68,8 +68,14 @@ public class PasswordChecker
             }
 			
             //if created password is less than 7 characters, has a space, or does not contain a non-letter --> INVALID
-            if (passInput.length() < 7 || space || !nonletter) {
-				System.out.println("Invalid password!");
+            if (passInput.length() < 7) {
+				System.out.println("Invalid password! Please use more than 7 characters.\n");
+			}
+            else if (space) {
+				System.out.println("Invalid password! Do not include a space.\n");
+			}
+            else if (!nonletter) {
+				System.out.println("Invalid password! Please use at least 1 non-letter.\n");
 			}
             
             else {
@@ -94,10 +100,10 @@ public class PasswordChecker
                     }
                     
                     if(attempts > 1) {
-                    	attemptsMessage.setText(attempts + " attempts left!");
+                    	attemptsMessage.setText("Unknown login credentials. " + attempts + " attempts left!");
                     }
                     else {
-                    	attemptsMessage.setText(attempts + " attempt left!"); //"attempts" is changed to "attempt" when there's 1 attempt left
+                    	attemptsMessage.setText("Unknown login credentials. " + attempts + " attempt left!"); //"attempts" is changed to "attempt" when there's 1 attempt left
                     }
                 	attempts--; //subtract number of attempts after each try
             	}
