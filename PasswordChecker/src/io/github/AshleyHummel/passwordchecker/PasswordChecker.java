@@ -43,9 +43,9 @@ public class PasswordChecker
 		//present instructions to create a valid username and password
 		JOptionPane.showMessageDialog(null, "Create a valid username and password."
 				+ "\nValid passwords have:"
-				+ "\n\t-At least 7 characters."
-				+ "\n\t-At least 1 non-letter."
-				+ "\n\t-No spaces.", "Instructions", JOptionPane.PLAIN_MESSAGE, null);
+				+ "\n\t-At least 7 characters"
+				+ "\n\t-At least 1 non-letter"
+				+ "\n\t-No spaces", "Instructions", JOptionPane.PLAIN_MESSAGE, null);
 		
 		//JOptionPane to create login credentials
 		int option = JOptionPane.showConfirmDialog(null, panel, "Create Account", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null);
